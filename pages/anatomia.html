@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Anatomia CSS</title>
+    <style>
+      .seletor {
+        color: #fff;
+        font-size: 30px;
+        text-align: center;
+        border: solid 5px navy;
+        font-family: Helvetica, sans-serif;
+        width: calc(100% - 100px);
+        background-color: rgb(34, 153, 189);
+      }
+
+      .seletor:hover {
+        background-color: orangered;
+      }
+
+      .seletor::first-letter {
+        font-size: 60px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="seletor">Conteúdo</div>
+  </body>
+</html>
+
+<!--
+    Demonstração da anatomia do CSS. É possível usar diversos tipos de valores,
+    como #abcdef ou nomes para cor, px para dimensões, palavras reservadas/pré-
+    definidas, múltiplos valores (shorthand property - atalho, pois é possível
+    definir cada valor separadamente) e as alternativas, como no caso das
+    famílias das fontes, além disso é possível usar funções. O padrão de
+    nomenclatura usado no CSS é o dash-case. Não há problema em usar outro
+    padrão desde que mantenhamos a consistência.
+
+    Também usamos pseudo-classe, relacionada a um estado do componente, para
+    definirmos estilos. Uso -> seletor:estado {}
+
+    Com pseudo-elemento é possível aplicar estilos a somente uma parte elementos
+    dentro da tag HTML. Uso -> seletor::elemento {}
+ -->
