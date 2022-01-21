@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Especificidade CSS</title>
+    <style>
+      /*
+       * https://developer.mozilla.org/pt-BR/docs/Web/CSS/Specificity
+       *
+       * Ordem de importância:
+       * 1 - Utilizando !important - evitar o uso
+       * 2 - Seletores específicos
+       * 3 - Última regra processada
+       */
+
+      .observacao {
+        padding: 20px;
+        font-size: 40px;
+        border: dashed 5px;
+        background-color: blue;
+      }
+
+      /* Não sobreescreve o background anterior */
+      p {
+        background-color: red;
+      }
+
+      /* Sobreescreve o background dos anteriores pois é mais específico */
+      p.observacao {
+        background-color: #5f5;
+      }
+
+      /* Sobreescreve o padding pois utiliza o !important */
+      p {
+        padding: 200px !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <p class="observacao">Olha essa observação!!!!</p>
+  </body>
+</html>
