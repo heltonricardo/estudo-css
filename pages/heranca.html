@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <title>Herança</title>
+    <style>
+      /*
+       * font-family e font-size são passados por herança por padrão
+       * border e padding não são passados por herança por padrão
+       */
+      body {
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 40px;
+        border: solid 3px red;
+        padding: 50px;
+      }
+
+      /* Explicitamente herdando border */
+      div {
+        border: inherit;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Herança</h1>
+    <div>Estou herdando</div>
+  </body>
+</html>
